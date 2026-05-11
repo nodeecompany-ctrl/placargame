@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 
     <style>
-        /* ───── PALETA BET365 & BASE ───── */
+        /* ───── PALETA & BASE ───── */
         :root {
             --bg: #282828;
             --bg-card: #383838;
@@ -28,35 +28,17 @@
         .container { padding: 20px; max-width: 480px; margin: 0 auto; }
 
         /* ───── COMPONENTES GERAIS ───── */
-        .app-title {
-            text-align: center; margin: 24px 0 20px; font-family: 'Bebas Neue', sans-serif; 
-            font-size: 2.6rem; letter-spacing: 3px; color: var(--brand-yellow);
-        }
+        .app-title { text-align: center; margin: 24px 0 20px; font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem; letter-spacing: 3px; color: var(--brand-yellow); }
         .section-title { font-size: 14px; font-weight: 800; text-transform: uppercase; color: var(--brand-yellow); margin-bottom: 12px; letter-spacing: 1px; }
         
-        .card {
-            background: var(--bg-card); border: 1px solid var(--border);
-            border-radius: 10px; padding: 16px; margin-bottom: 14px;
-        }
+        .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin-bottom: 14px; }
         .card h3 { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--brand-yellow); margin-bottom: 12px; }
 
-        input, textarea, select {
-            width: 100%; background: var(--bg-card2); border: 1px solid var(--border);
-            color: #fff; padding: 12px 14px; border-radius: 8px; margin-bottom: 10px;
-            font-size: 14px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color .2s;
-        }
+        input, textarea, select { width: 100%; background: var(--bg-card2); border: 1px solid var(--border); color: #fff; padding: 12px 14px; border-radius: 8px; margin-bottom: 10px; font-size: 14px; font-family: 'DM Sans', sans-serif; outline: none; transition: border-color .2s; }
         input:focus, textarea:focus, select:focus { border-color: var(--brand-yellow); }
-        select {
-            -webkit-appearance: none; appearance: none;
-            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFDF00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-            background-repeat: no-repeat; background-position: right 14px center; background-size: 16px; padding-right: 40px;
-        }
+        select { -webkit-appearance: none; appearance: none; background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23FFDF00' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e"); background-repeat: no-repeat; background-position: right 14px center; background-size: 16px; padding-right: 40px; }
 
-        .btn {
-            width: 100%; padding: 16px; border-radius: 8px; border: none; font-weight: 800; 
-            text-transform: uppercase; cursor: pointer; margin-top: 12px; display: block; 
-            text-align: center; font-family: 'DM Sans', sans-serif; font-size: 14px; transition: opacity .2s;
-        }
+        .btn { width: 100%; padding: 16px; border-radius: 8px; border: none; font-weight: 800; text-transform: uppercase; cursor: pointer; margin-top: 12px; display: block; text-align: center; font-family: 'DM Sans', sans-serif; font-size: 14px; transition: opacity .2s; }
         .btn:active { opacity: .8; }
         .btn-main { background: var(--brand-yellow); color: #000; }
         .btn-neutral { background: var(--bg-card); color: var(--white); border: 1px solid var(--border); }
@@ -64,16 +46,13 @@
         .btn-red-solid { background: var(--red); color: #fff; margin-top: 8px; }
 
         /* ───── SPLASH ───── */
-        #screen-splash {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #126E51 0%, #0a3d2c 100%);
-            display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 9999;
-        }
+        #screen-splash { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, #126E51 0%, #0a3d2c 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 9999; }
         .player-kick-animation { width: 200px; height: 200px; display: flex; align-items: center; justify-content: center; position: relative; }
         .player-kick-svg { width: 100%; height: 100%; animation: kickAnimation 1.5s ease-in-out infinite; }
         @keyframes kickAnimation { 0% { transform: translateX(-10px) rotate(0deg); } 50% { transform: translateX(20px) rotate(5deg); } 100% { transform: translateX(-10px) rotate(0deg); } }
         .ball { position: absolute; width: 20px; height: 20px; background: var(--brand-yellow); border-radius: 50%; top: 60px; right: 40px; box-shadow: 0 0 10px rgba(255, 223, 0, 0.6); animation: ballFly 1.5s ease-in-out infinite; }
         @keyframes ballFly { 0% { transform: translate(0, 0) scale(1); opacity: 1; } 50% { transform: translate(80px, -60px) scale(1.1); opacity: 1; } 100% { transform: translate(150px, -100px) scale(0.5); opacity: 0; } }
-        .splash-title { font-family: 'Bebas Neue', sans-serif; font-size: 3.2rem; letter-spacing: 4px; color: var(--brand-yellow); text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.5); }
+        .splash-title { font-family: 'Bebas Neue', sans-serif; font-size: 3.2rem; letter-spacing: 4px; color: var(--brand-yellow); text-transform: uppercase; text-shadow: 0 2px 4px rgba(0,0,0,0.5); text-align: center; }
         .splash-subtitle { font-size: 12px; color: var(--white); letter-spacing: 2px; text-transform: uppercase; }
 
         /* ───── DASHBOARD & GRUPOS ───── */
@@ -209,7 +188,7 @@
             <div class="card">
                 <div class="section-title">Seus Dados</div>
                 <input type="text" id="reg-name" placeholder="Seu Nome">
-                <input type="tel" id="reg-phone" placeholder="Seu Telefone (Login)">
+                <input type="tel" id="reg-phone" placeholder="Seu Telefone (somente números)">
                 <input type="password" id="reg-pass" placeholder="Crie uma Senha">
             </div>
             <button class="btn btn-main" onclick="cadastrarUsuario()">Finalizar Cadastro</button>
@@ -374,7 +353,14 @@
         // ═════════════════════════════════════════════════════════
         // ESTADO GLOBAL & AUTENTICAÇÃO
         // ═════════════════════════════════════════════════════════
-        let users = JSON.parse(localStorage.getItem('rdq_users_db')) || [];
+        let users = [];
+        try {
+            const savedUsers = localStorage.getItem('rdq_users_db');
+            if (savedUsers) users = JSON.parse(savedUsers);
+        } catch (e) {
+            users = [];
+        }
+
         let loggedUserPhone = sessionStorage.getItem('rdq_logged_user'); 
         
         let groups = [];
@@ -394,7 +380,7 @@
                 } else {
                     mostrarLogin();
                 }
-            }, 1500); // Exibe splash por 1.5s
+            }, 1500);
         });
 
         function hideAllScreens() {
@@ -413,15 +399,18 @@
         function mostrarCadastro() {
             hideAllScreens();
             document.getElementById('screen-register').classList.remove('hidden');
+            document.getElementById('reg-name').value = '';
+            document.getElementById('reg-phone').value = '';
+            document.getElementById('reg-pass').value = '';
         }
 
         function cadastrarUsuario() {
             const name = document.getElementById('reg-name').value.trim();
-            const phone = document.getElementById('reg-phone').value.trim();
+            const phone = document.getElementById('reg-phone').value.replace(/\D/g, '');
             const pass = document.getElementById('reg-pass').value.trim();
 
             if (!name || !phone || !pass) {
-                alert("Preencha todos os campos!"); return;
+                alert("Preencha todos os campos corretamente!"); return;
             }
             if (users.find(u => u.phone === phone)) {
                 alert("Este telefone já está cadastrado!"); return;
@@ -434,7 +423,7 @@
         }
 
         function fazerLogin() {
-            const phone = document.getElementById('login-phone').value.trim();
+            const phone = document.getElementById('login-phone').value.replace(/\D/g, '');
             const pass = document.getElementById('login-pass').value.trim();
 
             const user = users.find(u => u.phone === phone && u.password === pass);
@@ -456,7 +445,10 @@
 
         function iniciarSessao() {
             loadGroupsData();
-            const savedStateStr = localStorage.getItem('rdq_state_' + loggedUserPhone);
+            let savedStateStr = null;
+            try {
+                savedStateStr = localStorage.getItem('rdq_state_' + loggedUserPhone);
+            } catch (e) { console.error('Erro ao ler estado do jogo salvo.', e); }
             
             if (savedStateStr) {
                 hideAllScreens();
@@ -478,12 +470,21 @@
         // GESTÃO DE GRUPOS
         // ═════════════════════════════════════════════════════════
         function loadGroupsData() {
-            const allGroups = JSON.parse(localStorage.getItem('rdq_groups_db')) || [];
+            let allGroups = [];
+            try {
+                const data = localStorage.getItem('rdq_groups_db');
+                if (data) allGroups = JSON.parse(data);
+            } catch(e) { allGroups = []; }
             groups = allGroups.filter(g => g.owner === loggedUserPhone);
         }
 
         function saveGroupsData() {
-            let allGroups = JSON.parse(localStorage.getItem('rdq_groups_db')) || [];
+            let allGroups = [];
+            try {
+                const data = localStorage.getItem('rdq_groups_db');
+                if (data) allGroups = JSON.parse(data);
+            } catch(e) { allGroups = []; }
+            
             allGroups = allGroups.filter(g => g.owner !== loggedUserPhone);
             allGroups.push(...groups);
             localStorage.setItem('rdq_groups_db', JSON.stringify(allGroups));
@@ -529,9 +530,9 @@
         }
 
         function saveNewGroup() {
-            const name = document.getElementById('g-name').value;
-            const admin = document.getElementById('g-admin').value;
-            const phone = document.getElementById('g-phone').value;
+            const name = document.getElementById('g-name').value.trim();
+            const admin = document.getElementById('g-admin').value.trim();
+            const phone = document.getElementById('g-phone').value.replace(/\D/g, '');
 
             if (!name || !admin) { alert("Preencha o Nome e Responsável."); return; }
 
@@ -552,17 +553,20 @@
         function openGroupDetails(id) {
             currentGroupId = id;
             const group = groups.find(g => g.id === id);
+            if (!group) return showDashboard();
             
             hideAllScreens();
             document.getElementById('screen-group-details').classList.remove('hidden');
             document.getElementById('gd-title').innerText = group.name;
 
-            const totalPeladas = group.history.length;
+            const history = group.history || [];
+            const totalPeladas = history.length;
             let totalGols = 0;
             let playerGoalsMap = {};
 
-            group.history.forEach(pelada => {
-                pelada.ranking.forEach(p => {
+            history.forEach(pelada => {
+                const ranking = pelada.ranking || [];
+                ranking.forEach(p => {
                     totalGols += p.goals;
                     if(p.goals > 0) {
                         playerGoalsMap[p.name] = (playerGoalsMap[p.name] || 0) + p.goals;
@@ -645,9 +649,9 @@
         }
 
         function restoreState(state) {
-            teams = state.teams; teamCount = state.teamCount; court = state.court;
-            queue = state.queue; score = state.score; secondsLeft = state.secondsLeft;
-            isPaused = state.isPaused; activeScreen = state.activeScreen; currentGroupId = state.currentGroupId;
+            teams = state.teams || []; teamCount = state.teamCount || 4; court = state.court || {a:0, b:1};
+            queue = state.queue || []; score = state.score || {a:0, b:0}; secondsLeft = state.secondsLeft || 300;
+            isPaused = state.isPaused || false; activeScreen = state.activeScreen || 'setup'; currentGroupId = state.currentGroupId || null;
 
             hideAllScreens();
             if (activeScreen === 'game') {
@@ -658,7 +662,7 @@
                 document.getElementById('val-b').innerText = score.b;
                 if (!isPaused && secondsLeft > 0) runTimer();
             } else if (activeScreen === 'ranking') {
-                showFinalRanking(false); // não salva state novo
+                showFinalRanking(false); 
             } else {
                 startSetupForGroup();
             }
@@ -692,11 +696,14 @@
         function initApp() {
             teams = [];
             for (let i = 1; i <= teamCount; i++) {
-                const name = document.getElementById(`t${i}-name`).value || `Time ${i}`;
+                const name = document.getElementById(`t${i}-name`).value.trim() || `Time ${i}`;
                 const playersRaw = document.getElementById(`t${i}-players`).value.split('\n');
-                const players = playersRaw.filter(p => p.trim() !== '').map(p => ({ 
-                    name: p.trim(), goals: 0, yellowCards: 0 
-                }));
+                // Proteção contra linhas vazias caso haja múltiplos "Enters" na textArea
+                const players = playersRaw
+                    .map(p => p.trim())
+                    .filter(p => p !== '')
+                    .map(p => ({ name: p, goals: 0, yellowCards: 0 }));
+                    
                 teams.push({ id: i - 1, name, players, wins: 0 });
             }
 
@@ -877,12 +884,17 @@
             `).join('');
 
             if(shouldSave && currentGroupId) salvarPeladaNoHistorico(allPlayers);
-            clearState(); // Limpa o state atual pois a pelada terminou
+            clearState(); 
         }
 
         function salvarPeladaNoHistorico(rankingFinal) {
             const groupIndex = groups.findIndex(g => g.id === currentGroupId);
             if (groupIndex === -1) return;
+            
+            // Segurança para garantir que history é um array válido
+            if (!Array.isArray(groups[groupIndex].history)) {
+                groups[groupIndex].history = [];
+            }
             
             groups[groupIndex].history.push({
                 date: new Date().toISOString(),
