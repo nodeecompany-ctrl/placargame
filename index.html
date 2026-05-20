@@ -36,7 +36,6 @@
             min-height: 100vh;
         }
 
-        /* Pitch texture overlay */
         body::before {
             content: '';
             position: fixed;
@@ -51,7 +50,6 @@
         .hidden { display: none !important; }
         .container { padding: 16px 16px 32px; max-width: 480px; margin: 0 auto; position: relative; z-index: 1; }
 
-        /* ── TYPOGRAPHY ── */
         .display-title {
             font-family: 'Barlow Condensed', sans-serif;
             font-weight: 900;
@@ -61,7 +59,6 @@
         .label-xs { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--gray); }
         .label-sm { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--green); }
 
-        /* ── CARDS ── */
         .card {
             background: var(--bg-card);
             border: 1px solid var(--border);
@@ -80,7 +77,6 @@
             margin-bottom: 12px;
         }
 
-        /* ── INPUTS ── */
         input, textarea, select {
             width: 100%;
             background: var(--bg-input);
@@ -104,7 +100,6 @@
             background-repeat: no-repeat; background-position: right 14px center; background-size: 16px; padding-right: 40px;
         }
 
-        /* ── BUTTONS ── */
         .btn {
             width: 100%; padding: 15px; border-radius: 10px; border: none;
             font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700;
@@ -116,9 +111,8 @@
         .btn-main:hover { background: #00e07a; }
         .btn-neutral { background: var(--bg-card); color: var(--white); border: 1px solid var(--border2); }
         .btn-outline { background: transparent; color: var(--green); border: 1px solid var(--green); }
-        .btn-red    { background: var(--red); color: #fff; box-shadow: 0 4px 16px rgba(230,57,80,.3); }
+        .btn-red     { background: var(--red); color: #fff; box-shadow: 0 4px 16px rgba(230,57,80,.3); }
 
-        /* ── PAGE HEADER ── */
         .page-header {
             display: flex; align-items: center; justify-content: space-between;
             padding: 20px 0 16px;
@@ -143,7 +137,6 @@
         }
         .logo-sub { font-size: 9px; font-weight: 600; color: var(--gray); letter-spacing: 2px; text-transform: uppercase; }
 
-        /* ── ICON BUTTON ── */
         .icon-btn {
             width: 38px; height: 38px; border-radius: 8px; background: var(--bg-card);
             border: 1px solid var(--border2); color: var(--gray); font-size: 14px;
@@ -152,7 +145,6 @@
         }
         .icon-btn:hover { border-color: var(--green); color: var(--green); }
 
-        /* ── DASHBOARD ── */
         .dash-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; }
         .group-card {
             display: flex; justify-content: space-between; align-items: center;
@@ -167,12 +159,10 @@
         .empty-state i { font-size: 36px; margin-bottom: 14px; display: block; color: var(--border2); }
         .empty-state p { font-size: 13px; line-height: 1.6; }
 
-        /* ── STAT STRIP ── */
         .stat-strip { display: flex; justify-content: space-around; text-align: center; padding: 8px 0; }
         .stat-strip-val { font-family: 'Barlow Condensed', sans-serif; font-size: 28px; font-weight: 900; color: var(--green); line-height: 1; }
         .stat-strip-lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gray); margin-top: 3px; }
 
-        /* ── SETUP: TEAM COUNTER ── */
         .team-counter { display: flex; align-items: center; gap: 14px; }
         .team-counter label { font-size: 13px; font-weight: 600; color: var(--gray); }
         .counter-row { display: flex; align-items: center; gap: 12px; }
@@ -186,7 +176,6 @@
         .counter-btn:active { background: var(--green); color: #000; }
         .counter-val { font-family: 'Barlow Condensed', sans-serif; font-size: 26px; font-weight: 900; color: var(--white); min-width: 28px; text-align: center; }
 
-        /* ── GAME SCREEN ── */
         .sticky-header {
             position: sticky; top: 0; z-index: 100;
             background: var(--bg); padding: 12px 0 14px;
@@ -252,7 +241,6 @@
             color: var(--green); letter-spacing: 1px;
         }
 
-        /* ── PLAYER ROWS ── */
         .match-divider { display: flex; align-items: center; gap: 8px; margin: 14px 0 10px; }
         .div-line { flex: 1; height: 1px; background: var(--border); }
         .div-label { font-size: 9px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: var(--gray); }
@@ -283,11 +271,12 @@
         .p-avatar.susp { border-color: var(--red); background: rgba(230,57,80,.1); color: var(--red); }
         .suspended-icon { position: absolute; top: -4px; right: -4px; font-size: 9px; }
 
+        /* AJUSTE DE QA AQUI: Removido max-width estático para evitar quebras feias */
         .p-info { flex: 1; min-width: 0; }
         .p-name {
             font-size: 12px; font-weight: 700; color: var(--white);
             white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-            max-width: 90px; line-height: 1.2;
+            line-height: 1.2;
         }
         .p-cards { display: flex; gap: 3px; margin-top: 2px; flex-wrap: wrap; }
         .y-card { display: inline-block; width: 8px; height: 11px; background: var(--yellow); border-radius: 1px; }
@@ -305,7 +294,6 @@
 
         .row-center-line { width: 1px; height: 30px; background: var(--border2); flex-shrink: 0; }
 
-        /* ── RANKING ── */
         #print-area {
             background: linear-gradient(145deg, #0d3d22 0%, #072716 100%);
             border: 2px solid rgba(245,196,0,.4);
@@ -325,7 +313,6 @@
         .rank-detail { font-size: 10px; color: rgba(255,255,255,.5); text-align: right; margin-top: 1px; }
         .rank-hashtag { text-align: center; font-family: 'Barlow Condensed', sans-serif; font-size: 22px; font-weight: 900; letter-spacing: 3px; color: rgba(245,196,0,.5); margin-top: 18px; padding-top: 14px; border-top: 1px dashed rgba(255,255,255,.15); }
 
-        /* ── ACTION MODAL (BOTTOM SHEET STYLE) ── */
         #action-modal {
             position: fixed; inset: 0;
             background: rgba(0,0,0,.75); backdrop-filter: blur(6px);
@@ -369,7 +356,6 @@
         .action-sheet-close { padding: 0 20px 16px; }
         .action-sheet-close .btn { margin-top: 0; }
 
-        /* ── CONFIRM MODAL ── */
         #custom-modal {
             position: fixed; inset: 0;
             background: rgba(0,0,0,.8); backdrop-filter: blur(4px);
@@ -393,7 +379,6 @@
 </head>
 <body>
 
-<!-- ── LOGIN ── -->
 <div id="screen-login" class="hidden">
     <div class="container" style="padding-top: 60px;">
         <div class="logo-mark" style="justify-content:center; margin-bottom: 36px; flex-direction:column; text-align:center; gap:10px;">
@@ -413,7 +398,6 @@
     </div>
 </div>
 
-<!-- ── CADASTRO ── -->
 <div id="screen-register" class="hidden">
     <div class="container" style="padding-top: 40px;">
         <div class="page-header">
@@ -430,7 +414,6 @@
     </div>
 </div>
 
-<!-- ── DASHBOARD ── -->
 <div id="screen-dashboard" class="hidden">
     <div class="container">
         <div class="page-header">
@@ -447,7 +430,6 @@
     </div>
 </div>
 
-<!-- ── NOVO GRUPO ── -->
 <div id="screen-group-form" class="hidden">
     <div class="container">
         <div class="page-header">
@@ -464,7 +446,6 @@
     </div>
 </div>
 
-<!-- ── DETALHES DO GRUPO ── -->
 <div id="screen-group-details" class="hidden">
     <div class="container">
         <div class="page-header">
@@ -484,7 +465,6 @@
     </div>
 </div>
 
-<!-- ── SETUP ── -->
 <div id="screen-setup" class="hidden">
     <div class="container">
         <div class="page-header">
@@ -517,7 +497,6 @@
     </div>
 </div>
 
-<!-- ── JOGO ── -->
 <div id="screen-game" class="hidden">
     <div class="container">
         <div class="sticky-header">
@@ -546,7 +525,6 @@
     </div>
 </div>
 
-<!-- ── RANKING ── -->
 <div id="screen-ranking" class="hidden">
     <div class="container">
         <div id="print-area">
@@ -567,7 +545,6 @@
     </div>
 </div>
 
-<!-- ── CONFIRM MODAL ── -->
 <div id="custom-modal" class="hidden">
     <div class="modal-box">
         <h2 id="modal-title">Título</h2>
@@ -577,7 +554,6 @@
     </div>
 </div>
 
-<!-- ── ACTION SHEET ── -->
 <div id="action-modal" class="hidden" onclick="closeActionModal(event)">
     <div class="action-sheet" id="action-sheet-box">
         <div class="action-sheet-handle"></div>
@@ -603,13 +579,11 @@ let loggedUserPhone = sessionStorage.getItem('rdq_logged_user');
 let groups = [];
 let currentGroupId = null;
 
-// Jogo
 let teams = [], teamCount = 4;
 let court = { a: 0, b: 1 }, queue = [];
 let score = { a: 0, b: 0 }, secondsLeft = 300;
 let timer = null, isPaused = false, activeScreen = 'setup';
 
-// Cartola: Gol=8, Assistência=5, Amarelo=-2, Vermelho=-5
 const PTS_GOL = 8, PTS_ASSIST = 5, PTS_AMARELO = -2, PTS_VERMELHO = -5;
 
 function calcPoints(p) {
@@ -624,7 +598,6 @@ window.addEventListener('load', () => {
     else mostrarLogin();
 });
 
-// ── AUTH ──
 function mostrarLogin() {
     hideAll();
     show('screen-login');
@@ -672,7 +645,6 @@ function iniciarSessao() {
     } else showDashboard();
 }
 
-// ── GRUPOS ──
 function loadGroupsData() {
     try {
         const d = localStorage.getItem('rdq_groups_db');
@@ -747,11 +719,9 @@ function backToGroupDetails() {
     if (currentGroupId) openGroupDetails(currentGroupId); else showDashboard();
 }
 
-// ── SETUP ──
 function changeTeamCount(delta) {
     const n = teamCount + delta;
     if (n < 3 || n > 8) return;
-    // Salva valores atuais antes de re-renderizar
     const savedNames = {}, savedPlayers = {};
     for (let i = 1; i <= 8; i++) {
         const ne = document.getElementById(`t${i}-name`);
@@ -796,7 +766,6 @@ function initApp() {
     activeScreen = 'game'; saveState(); startMatch();
 }
 
-// ── JOGO ──
 function startMatch() {
     score = { a:0, b:0 }; isPaused = false;
     updatePauseUI();
@@ -855,15 +824,12 @@ function renderMatchPlayers() {
 }
 
 function buildPlayerCell(p, teamIdx, pIdx, isRight) {
-    if (!p) return `<div class="row-center-line"></div>`.replace('row-center-line','p-cell'+'');
-    // Center dot when right side
-    if (isRight && !p) return `<div></div>`;
+    if (!p) return `<div class="p-cell${isRight ? ' right' : ''}"></div>`;
 
     const susp = isSuspended(p);
     const initials_ = initials(p.name);
     const name_ = shortName(p.name);
 
-    // Cards display
     let cardsHtml = '';
     for (let y=0; y<Math.min(p.yellowCards,2); y++) cardsHtml += `<span class="y-card"></span>`;
     for (let r=0; r<(p.redCards||0); r++) cardsHtml += `<span class="r-card"></span>`;
@@ -888,7 +854,6 @@ function buildPlayerCell(p, teamIdx, pIdx, isRight) {
     </div>`;
 }
 
-// ── ACTION SHEET ──
 let _actionTeam = null, _actionPlayer = null;
 
 function openPlayerAction(teamIdx, pIdx) {
@@ -903,7 +868,6 @@ function openPlayerAction(teamIdx, pIdx) {
     const hasGoals = p.goals > 0;
     const hasAssists = p.assists > 0;
 
-    // Build sub options label
     const hasQueuePlayers = queue.some(qi => teams[qi].players.length > 0);
 
     document.getElementById('as-grid').innerHTML = `
@@ -982,7 +946,6 @@ function openSubModal(teamIdx, playerIdx) {
     });
 }
 
-// ── TIMER ──
 function togglePause() {
     isPaused = !isPaused; updatePauseUI(); saveState();
     if (isPaused) clearInterval(timer); else runTimer();
@@ -1011,7 +974,6 @@ function runTimer() {
     }, 1000);
 }
 
-// ── FIM DE JOGO ──
 function manualEnd() {
     clearInterval(timer);
     if (score.a === score.b) {
@@ -1041,14 +1003,9 @@ function finalizeGame(wSide, lSide) {
     const winnerId = court[wSide];
     const loserId  = court[lSide];
 
-    // ✅ Computa vitória corretamente
     teams[winnerId].wins = (teams[winnerId].wins || 0) + 1;
 
-    // Resetar cartões dos jogadores para próxima partida
-    // (amarelos acumulados na PELADA não resetam, só entre peladas)
-    // Vermelho = suspenso só nessa partida, na próxima volta
     teams.forEach(t => t.players.forEach(p => { p.redCards = 0; }));
-    // 2 amarelos = suspenso apenas na partida (reset para a próxima)
     teams.forEach(t => t.players.forEach(p => {
         if (p.yellowCards >= 2) p.yellowCards = 0;
     }));
@@ -1070,7 +1027,6 @@ function finalizeGame(wSide, lSide) {
     }
 }
 
-// ── RANKING FINAL ──
 function confirmEndPelada() {
     showModal({ title:'Encerrar Pelada?', msg:'Gera o ranking final e salva no histórico.', type:'confirm', btn1Text:'Encerrar', onBtn1: () => showFinalRanking() });
 }
@@ -1128,7 +1084,6 @@ function downloadImage() {
 
 function novaPartida() { startSetupForGroup(); window.scrollTo(0,0); }
 
-// ── ESTADO ──
 function saveState() {
     if (!loggedUserPhone) return;
     try {
@@ -1158,7 +1113,6 @@ function restoreState(s) {
     }
 }
 
-// ── MODAL UTILS ──
 function showModal({ title, msg, type='alert', inputVal='', btn1Text='OK', btn2Text='Cancelar', onBtn1, onBtn2 }) {
     document.getElementById('modal-title').innerText = title;
     document.getElementById('modal-msg').innerHTML = msg;
@@ -1181,19 +1135,30 @@ function showModal({ title, msg, type='alert', inputVal='', btn1Text='OK', btn2T
 }
 function closeModal() { document.getElementById('custom-modal').classList.add('hidden'); }
 
-// ── HELPERS ──
 function hideAll() { document.querySelectorAll('body > div[id^="screen-"]').forEach(e=>e.classList.add('hidden')); closeModal(); }
 function show(id) { document.getElementById(id).classList.remove('hidden'); }
 function val(id) { return document.getElementById(id)?.value || ''; }
 function setValue(id, v) { const e = document.getElementById(id); if(e) e.value = v; }
-function initials(name) { return name.trim().split(' ').map(w=>w[0]).join('').slice(0,2).toUpperCase(); }
+
+function initials(name) { 
+    if (!name) return '??';
+    const parts = name.trim().split(' ').filter(Boolean);
+    if (parts.length === 0) return '??';
+    if (parts.length === 1) return parts[0].slice(0, 2).toUpperCase();
+    return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+}
+
 function shortName(name) {
     if (!name) return '---';
     const parts = name.trim().split(' ').filter(Boolean);
-    if (parts.length === 1) return parts[0];
-    const suffixes = ['junior','júnior','filho','neto','sobrinho'];
-    let last = parts[parts.length-1];
-    if (parts.length > 2 && suffixes.includes(last.toLowerCase())) last = parts[parts.length-2];
+    if (parts.length <= 1) return name;
+    
+    const suffixes = ['junior', 'júnior', 'filho', 'neto', 'sobrinho'];
+    let last = parts[parts.length - 1];
+    
+    if (parts.length > 2 && suffixes.includes(last.toLowerCase())) {
+        last = parts[parts.length - 2] + ' ' + last;
+    }
     return `${parts[0]} ${last}`;
 }
 </script>
